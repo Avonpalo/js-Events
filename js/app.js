@@ -78,16 +78,21 @@ function valueMenu(){
 //5. Gin.
 /*Create a function named redFace that will change the paragraph text to red and a font size of 20px after clicking on the text.*/
 
+
+
 /*
 function redFace(){
-	var pElem = document.getElementById("drink");
-	drink.style.fontSize = 20px;
-	drink.style.text = "red";
+	document.getElementById("drink").style.fontSize = 20px;
+	document.getElementById("drink").style.color = "red";
 }
 
 pElem.addEventListener("click", redFace);
 
 /*
+function myFunction() {
+    document.getElementById("demo").style.color = "red";
+}
+
 function zoom(){
   var pElem = document.getElementById("biggie");
   biggie.style.fontSize = "150%";
@@ -107,7 +112,7 @@ function showPrice(){
 }
 
 var buttonElem=document.getElementById("price");
-price.addEventListener("mouseover", showPrice);
+price.addEventListener("mouseover", showPrice());
 
 /*
 
@@ -152,16 +157,55 @@ var buttonElem = document.getElementById("random"); /* "random" is the button id
 buttonElem.addEventListener("click", randomQuote); /* randomQuote is the function to execute. */
 
 
-/* 
-<div class="block2 col-sm-4"><img src="http://fotos02.farodevigo.es/fotos/noticias/318x200/2009-04-01_IMG_2009-03-25_20:51:01_soc4button.jpg" alt="">
-      <h3>Say It Again, Randomly</h3>
-       <p id="beni">Generate a random quote from clicking on the the button</p>
-       <button id="random">Change da Quotes Son</button>
-       <p id="displayQuotes"></p>
-       
-      </div>
-*/
 
 //9. Unlock the Secret to Financial Freedom
 /*Create an event listener that will show and hide the message when clicking on the button.
 */
+
+/*
+<div id="clock"></div>
+
+ // get the clock div 
+    var myClock = document.getElementById('clock');
+
+function showHideMsg() { 
+    
+
+    // get the current value of the clock's display property 
+    var displaySetting = myClock.style.display;
+
+    // also get the clock button, so we can change what it says 
+    var clockButton = document.getElementById('clockButton');
+				
+    // now toggle the clock and the button text, depending on current state
+    if (displaySetting == 'block') { 
+      // clock is visible. hide it
+      myClock.style.display = 'none';
+      // change button text
+      clockButton.innerHTML = 'Show clock';
+    }
+    else { 
+      // clock is hidden. show it 
+      myClock.style.display = 'block';
+      // change button text
+      clockButton.innerHTML = 'Hide clock';
+    }
+  }  
+
+var buttonElem = document.getElementById("showHide"); /* "showHide" is the button id. */
+buttonElem.addEventListener("click", showHideMsg);
+
+/* <button onclick="toggleClock()" id="clockButton">Show clock</button>
+
+
+
+//*
+<div class="block3 col-sm-4"><img src="http://bigcitybloggers.com/wp-content/uploads/2014/10/logo_man.png" alt="">
+    <h3>Unlock the Secret to Financial Freedom</h3>
+    <p id="freedom">Create an event listener that will show and hide the message when clicking on the button</p>
+       <button id="showHide">Get Secret Now</button>
+       <p id="showmoney">
+        <img id="catmoney" src="http://previews.123rf.com/images/aptypkok/aptypkok1201/aptypkok120100093/11943484-Red-cat-sitting-on-the-dollar-on-the-white-background-Stock-Photo.jpg" alt="">
+      </p>
+   </div>
+   */
