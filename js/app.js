@@ -134,7 +134,7 @@ function dispQuote(){
 }
 
 var buttonElem = document.getElementById("Benjamin"); /* "Benjamin" is the button id. */
-buttonElem.addEventListener("click", dispQuote); /* dispQuote is the function to execute */
+buttonElem.addEventListener("click", dispQuote); /* dispQuote is the function to execute. */
 
 
 //8. Say It again, Randomly
@@ -143,13 +143,13 @@ buttonElem.addEventListener("click", dispQuote); /* dispQuote is the function to
 var quotes = ["It's a funny thing about comin' home. Looks the same, smells the same, feels the same. You'll realize what's changed is you.", "Momma? Momma? Some days, I feel different than the day before.", "Some people, were born to sit by a river. Some get struck by lightning. Some have an ear for music. Some are artists. Some swim. Some know buttons. Some know Shakespeare. Some are mothers. And some people, dance.", "For what it's worth, it's never too late to be whoever you want to be."];
 
 function randomQuote(){
-	var randomNumber = Math.floor(Math.random() * quotes.length);
-	document.getElementById("displayQuote").innerHTML = quotes[randomNumber];
+	var randomNumber = Math.floor(Math.random() * quotes.length); /* this is the random quote generator */
+	document.getElementById("displayQuote").innerHTML = quotes[randomNumber]; /* "displayQuote" is where to add the random quote when the Change da Quotes Son button is pushed. Used the .innerHTML method to pass a randomly retrieved quote from the quotes array[which was pre-defined] as the value that will be added into our HTML "displayQuotes" element. */
 
 }
 
-var buttonElem = document.getElementById("random");
-buttonElem.addEventListener("click", randomQuote);
+var buttonElem = document.getElementById("random"); /* "random" is the button id. */
+buttonElem.addEventListener("click", randomQuote); /* randomQuote is the function to execute. */
 
 
 /* 
