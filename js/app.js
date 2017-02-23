@@ -132,6 +132,7 @@ function dispQuote(){
 	var pElem = document.getElementById("displayQuote"); /* "displayQuote" is the empty paragraph id. */
 	pElem.innerHTML = myQuote; /* myQuote is the variable to add to the "displayQuote" paragraph when the Make Me Say Sumptin' button is pushed. */
 }
+
 var buttonElem = document.getElementById("Benjamin"); /* "Benjamin" is the button id. */
 buttonElem.addEventListener("click", dispQuote); /* dispQuote is the function to execute */
 
@@ -141,8 +142,25 @@ buttonElem.addEventListener("click", dispQuote); /* dispQuote is the function to
 
 var quotes = ["It's a funny thing about comin' home. Looks the same, smells the same, feels the same. You'll realize what's changed is you.", "Momma? Momma? Some days, I feel different than the day before.", "Some people, were born to sit by a river. Some get struck by lightning. Some have an ear for music. Some are artists. Some swim. Some know buttons. Some know Shakespeare. Some are mothers. And some people, dance.", "For what it's worth, it's never too late to be whoever you want to be."];
 
+function randomQuote(){
+	var randomNumber = Math.floor(Math.random() * quotes.length);
+	document.getElementById("displayQuote").innerHTML = quotes[randomNumber];
+
+}
+
+var buttonElem = document.getElementById("random");
+buttonElem.addEventListener("click", randomQuote);
 
 
+/* 
+<div class="block2 col-sm-4"><img src="http://fotos02.farodevigo.es/fotos/noticias/318x200/2009-04-01_IMG_2009-03-25_20:51:01_soc4button.jpg" alt="">
+      <h3>Say It Again, Randomly</h3>
+       <p id="beni">Generate a random quote from clicking on the the button</p>
+       <button id="random">Change da Quotes Son</button>
+       <p id="displayQuotes"></p>
+       
+      </div>
+*/
 
 //9. Unlock the Secret to Financial Freedom
 /*Create an event listener that will show and hide the message when clicking on the button.
