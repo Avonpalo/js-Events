@@ -20,10 +20,9 @@ buttonElem.addEventListener("click", moreContent);
 The function will hide the contents in the paragraph with the id of `less` after clicking on the `Show Less` link.*/
 
 
-/*
 function lessContent(){
 	var showLessLink = document.getElementById("less");
-	showLessLink.addEventListener("click", lessContent);
+	less.style.display = "none";
 }
 
 var buttonElem = document.getElementById("noMore");
@@ -35,15 +34,6 @@ buttonElem.addEventListener("click", less);
 <p id="less">VHS wayfarers brooklyn church-key edison bulb, cred helvetica heirloom chillwave lomo ennui. Lomo heirloom fap jianbing, selfies gastropub you probably haven't heard of them. Austin godard ugh, portland stumptown kale chips taxidermy four dollar toast gastropub gochujang bicycle rights fanny pack microdosing. Kinfolk tousled 8-bit, keytar portland 3 wolf moon typewriter.</p>
 
 
-stories = document.getElementsByClassName('story');     
-    for (var i = 0; i < stories.length; i++) {              // for each story
-        stories[i].addEventListener("click", function () {  // add an onClick listener
-            news = this.getElementsByClassName('news');     
-            for (var j = 0; j < news.length; j++) {         // for each news in story
-                news[j].classList.toggle('hide');           // toggle 'hide' on clicked
-            }
-        });
-    }
 
 //3. Tacocat, The Original Palindrome King
 /*Create a function named `zoom` that will increase the font size of the paragraph with the id of `biggie` after hovering your mouse over it. Increae the font size to 150%*/
@@ -57,23 +47,36 @@ function zoom(){
 //4. McDonalds
 /*Create a variable name menuItems and assign it an array of three of your favorite items at McDonald's.
 
-Next, create a function named valueMenu that will display your favorite items in the paragraph the the id of `menu` after clicking on the showMenu paragraph.*/
+Next, create a function named valueMenu that will display your favorite items in the paragraph with the id of `menu` after clicking on the showMenu paragraph.*/
 
-/*
+
 var menuItems = ["Big Mac", "Chicken McNuggets", "Egg-White Delight McMuffin"];
 
 function valueMenu(){
 	for (var i = 0; i < menuItems.length; i++){
-		
-
-		console.log(menuItems[i]);
+		document.getElementById("menu").innerHTML = menuItems[i];
 	}
 }
+
+var pElem = document.getElementById("showMenu");
+pElem.addEventListener("click", valueMenu());
 
 /*
 <p id="showMenu" onclick="valueMenu()">Access Today's Special Dollar Menu.
           </p>
-          <p id="menu"></p>
+          <p id="menu"></p> */
+
+/*
+function randomQuote(){
+  var randomNumber = Math.floor(Math.random() * quotes.length); /* this is the random quote generator */
+ /* document.getElementById("displayQuote").innerHTML = quotes[randomNumber]; /* "displayQuote" is where to add the random quote when the Change da Quotes Son button is pushed. Used the .innerHTML method to pass a randomly retrieved quote from the quotes array[which was pre-defined] as the value that will be added into our HTML "displayQuotes" element. */
+/*
+}
+
+var buttonElem = document.getElementById("random"); /* "random" is the button id. */
+/*buttonElem.addEventListener("click", randomQuote); /* randomQuote is the function to execute. */
+/*
+*/
 
 //5. Gin.
 /*Create a function named redFace that will change the paragraph text to red and a font size of 20px after clicking on the text.*/
