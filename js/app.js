@@ -106,26 +106,14 @@ function zoom(){
 
 function showPrice(){
 	var node = document.createElement("PRI");
-	var textnode = document.createTextNode("Price: $5.55");
-	node.appendChild(textnode);
-	document.getElementById("oreo").appendChild(node);
+	var textNode = document.createTextNode("Price: $5.55");
+	node.appendChild(textNode); /* It is suggested to create a node/textNode after you do a create element. */
+	document.getElementById("oreo").appendChild(node); /* this line appends the actual: "Price: $5.55" after the paragraph text of the paragraph "oreo" is displayed */
 }
 
-var buttonElem=document.getElementById("price");
-price.addEventListener("mouseover", showPrice());
-
-/*
-
-function myFunction() {
-    var node = document.createElement("LI");
-    var textnode = document.createTextNode("Water");
-    node.appendChild(textnode);
-    document.getElementById("myList").appendChild(node);
-}
-
-/*
-<p id="oreo" onmouseover="showPrice()">Oreo is a sandwich cookie consisting of two chocolateae wafers with a sweet creme filling in between, and (as of 1974) are marketed as "Chocolate Sandwich Cookies" on the package in which they are held.</p>
-    <p id="price"></p>   
+var buttonElem=document.getElementById("price"); /* "price" is the id for the empty paragraph where you store & displsy the actual price of $5.55. */
+price.addEventListener("mouseover", showPrice()); /* When you move your mouse over the text in the Oreo paragraph, it'll show/display the price of $5.55. */
+ 
 
 
 //7. Mr. Buttons
